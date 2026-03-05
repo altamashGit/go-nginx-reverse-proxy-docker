@@ -1,5 +1,7 @@
 # 🚀 Go Web App with Nginx Reverse Proxy (Dockerized DevOps Project)
 
+---
+
 ## 📌 Project Overview
 
 This project demonstrates how to deploy a **Go web application using Docker with production-level best practices**.
@@ -9,14 +11,6 @@ The application is served behind **Nginx as a reverse proxy** and built using a 
 The project is orchestrated using **Docker Compose**, where the **Nginx configuration and static public files are mounted from the host machine**.
 
 This project showcases practical **DevOps skills including container security, image optimization, reverse proxy configuration, and container orchestration.**
-
----
-
-# 🧑‍💻 Author
-
-**Altamash Alam**
-
-DevOps & Cloud Enthusiast
 
 ---
 
@@ -66,6 +60,7 @@ project-folder
 │   └── script.js
 │
 ├── Dockerfile
+├── docker-multistage
 ├── docker-compose.yml
 ├── nginx.conf
 │
@@ -156,9 +151,9 @@ The final optimized Docker image is pushed to **Docker Registry** for easy deplo
 Example workflow:
 
 ```
-docker build -t go-nginx-app .
-docker tag go-nginx-app username/go-nginx-app
-docker push username/go-nginx-app
+docker build -t go-app:nonroot .
+docker tag go-app:nonroot altamsh/go-app:nonroot
+docker push altamsh/go-app:nonroot
 ```
 
 ---
@@ -168,7 +163,7 @@ docker push username/go-nginx-app
 ### Clone the repository
 
 ```
-git clone https://github.com/yourusername/go-nginx-devops-project.git
+git clone https://github.com/altamashGit/go-nginx-devops-project.git
 cd go-nginx-devops-project
 ```
 
@@ -188,27 +183,8 @@ http://localhost
 
 # 📸 Project Screenshots
 
-Add screenshots inside a folder:
+:
 
-```
-screenshots/
-```
-
-Example:
-
-```
-screenshots/
-├── app-ui.png
-├── docker-running.png
-├── nginx-container.png
-```
-
-Then add them in README like:
-
-```
-## Application UI
-
-![UI](screenshots/app-ui.png)
 ```
 
 ---
@@ -242,6 +218,14 @@ This project is built to demonstrate **practical DevOps and containerization ski
 * Deploy on AWS ECS or Kubernetes
 * Add monitoring with Prometheus & Grafana
 * Add Redis or database integration.
+
+---
+
+# 🧑‍💻 Author
+
+**Altamash Alam**
+
+DevOps & Cloud Enthusiast
 
 ---
 
