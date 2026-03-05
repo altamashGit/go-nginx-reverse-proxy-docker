@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Docker Image Optimization</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>🚀 Docker Image Optimization Dashboard</h1>
+
+<p class="author">Created by <b>Altamash Alam</b></p>
+
+<button onclick="loadData()">Run Simulation</button>
+
+<div class="dashboard">
+
+<div class="card large">
+
+<h2>🐳 Large Docker Image</h2>
+
+<div class="status red"></div>
+
+<div class="metric">
+<p>Image Size</p>
+<div class="bar"><div id="largeSizeBar"></div></div>
+<span id="largeSize"></span>
+</div>
+
+<div class="metric">
+<p>Build Time</p>
+<span id="largeBuild"></span>
+</div>
+
+<div class="metric">
+<p>Startup Time</p>
+<span id="largeStart"></span>
+</div>
+
+</div>
+
+
+<div class="card small">
+
+<h2>⚡ Optimized Docker Image</h2>
+
+<div class="status green"></div>
+
+<div class="metric">
+<p>Image Size</p>
+<div class="bar"><div id="smallSizeBar"></div></div>
+<span id="smallSize"></span>
+</div>
+
+<div class="metric">
+<p>Build Time</p>
+<span id="smallBuild"></span>
+</div>
+
+<div class="metric">
+<p>Startup Time</p>
+<span id="smallStart"></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
