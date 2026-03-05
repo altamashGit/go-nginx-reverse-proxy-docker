@@ -1,0 +1,34 @@
+FROM golang:1.24-alpine AS build
+
+WORKDIR /app
+
+COPY go.mod .
+
+RUN go mod download
+
+COPY . .
+
+RUN go build -o main .
+
+# -------------stage-2--------------
+
+FROM alpine
+
+# Create non-root user
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /app
+
+COPY --from=build /app/main /app/main
+COPY --from=build /app/ /app/
+
+#change ownership on non-root user can access file
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
+EXPOSE 3000
+
+
+CMD ["./main"]
