@@ -241,7 +241,7 @@ This project is built to demonstrate **practical DevOps and containerization ski
 * Add CI/CD pipeline (GitHub Actions / Jenkins)
 * Deploy on AWS ECS or Kubernetes
 * Add monitoring with Prometheus & Grafana
-* Add Redis or database integration
+* Add Redis or database integration.
 
 ---
 
